@@ -2,7 +2,7 @@
 """
 Created on Tue Feb 21 12:08:10 2023
 
-@author: st
+@author: JaimesPita
 """
 
 import cv2
