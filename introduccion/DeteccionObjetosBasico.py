@@ -23,15 +23,14 @@ class DeteccionObjetosBasico:
         self.mostrar_imagen()
                                     
     def mostrar_imagen(self):
-        #imagen_bn=np.expand_dims(self.imagen_bn,axis=2)
         imagen=cv2.hconcat([self.imagen,self.imagen_bn])
         
         cv2.imshow('img',imagen)
         cv2.waitKey(0)
         
-imagen=cv2.imread(".\imagenes\hormigas.jpg",1)
-fronteras={'Bmin':50,'Bmax':90,'Gmin':50,'Gmax':90,'Rmin':100,'Rmax':145}
+imagen=cv2.imread(".\imagenes\manos.jpg",1)
+fronteras={'Bmin':30,'Bmax':90,'Gmin':30,'Gmax':90,'Rmin':80,'Rmax':145}
 deteccion1=DeteccionObjetosBasico(imagen)
 deteccion1.clasificador_pixel()
-#deteccion1.mostrar_imagen()
+
 
